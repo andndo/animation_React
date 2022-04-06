@@ -6,18 +6,51 @@ export const Body = styled.body`
 `;
 
 export const MainDiv = styled.div`
-  background-color: #000;
+  background-color: #fff;
   text-align: center;
   width: 2000px;
-  margin-left: 280px;
-  -webkit-transition: background-color 2s, -webkit-transform 2s;
+  margin-left: 220px;
   transition: background-color 2s, transform 2s;
+  border-color: skyblue;
+
 
   :hover {
     background-color: #ffcccc;
     //width: 200px;
     //height: 2000px;
     font-family: "Pacifico", cursive;
+  }
+`;
+
+export const Ball = styled.div`
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-top: -700px;
+  margin-left: 150px;
+  background-color: #000;
+  position: relative;
+  top: 0px;
+  left: 150px;
+  animation: Ball_down 0.5s linear infinite alternate;
+
+  @keyframes Ball_down {
+    0% {
+      top: 100px;
+      transform: scale(1, 1);
+    }
+    95% {
+      width: 100px;
+      transform: scale(1, 1);
+    }
+    98%,
+    100% {
+      /* height: 90px;
+      width: 115px; */
+      transform: scale(1.1, 0.9);
+
+      top: 300px;
+    }
   }
 `;
 
@@ -68,4 +101,6 @@ export const H1 = styled.h1`
   font-size: 150px;
   background-color: #fff;
   text-shadow: -7px 0 1px cyan, 7px 0 1px red;
+  border: 20px;
+  border-color: skyblue;
 `;
